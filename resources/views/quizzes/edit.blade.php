@@ -1,0 +1,27 @@
+{{-- resources/views/quizzes/edit.blade.php --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Quiz</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Quiz</h1>
+        <form action="{{ route('quizzes.update', $quiz->id) }}" method="POST">
+            @csrf
+            @method('PUT')
+            <div class="form-group">
+                <label for="title">Quiz Title</label>
+                <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $quiz->title) }}" required>
+            </div>
+            <button type="submit" class="btn btn-success">Update Quiz</button>
+            <a href="{{ route('quizzes.index') }}" class="btn btn-secondary">Back</a>
+        </form>
+    </div>
+</body>
+</html>
