@@ -51,6 +51,7 @@ cp .env.example .env
 php artisan key:generate
 
 # Run migrations
+before run migration, you need to create a database with name (e-commerce-system) then run migration
 php artisan migrate
 
 # Serve the app
