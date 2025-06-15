@@ -35,11 +35,11 @@ A simple full-stack e-commerce system built using:
 
 ### 1. Clone the project
 
-git clone https://github.com/your-username/ecommerce-project.git
+git clone https://github.com/mohamed-elshahat-95/e-commerce-system-laravel-react.git
 cd ecommerce-project
 
 2. Backend Setup (Laravel)
-cd backend
+cd e-commerce-system-laravel-react
 
 # Install dependencies
 composer install
@@ -59,7 +59,7 @@ By default, Laravel will run on:
 http://127.0.0.1:8000
 
 3. Frontend Setup (React)
-cd ../frontend
+cd e-commerce-system-laravel-react/resources/js
 
 # Install dependencies
 npm install
@@ -77,4 +77,5 @@ After successful login, a token is stored in localStorage and used in API header
 Protected API requests must include:
 Authorization: Bearer YOUR_TOKEN
 
+# Also, you can download the Postman collection where i attached it into project root 
 
